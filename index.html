@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CTF</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.42.0/dist/tabler-icons.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="layout">
+    <aside class="panel panel-left" id="panel-left">
+      <h2 class="panel-title"><i class="ti ti-terminal-2"></i> Logs</h2>
+      <div class="panel-body"></div>
+    </aside>
+
+    <main class="panel panel-center" id="panel-center">
+      <h2 class="panel-title"><i class="ti ti-topology-star-3"></i> Map</h2>
+      <div class="panel-body"></div>
+    </main>
+
+    <aside class="panel panel-right" id="panel-right">
+      <div class="view-toggle" role="tablist" aria-label="Side">
+        <button class="view-tab view-defender" type="button" role="tab" data-view="defender">
+          <i class="ti ti-shield"></i> Defender
+        </button>
+        <button class="view-tab view-attacker" type="button" role="tab" data-view="attacker">
+          <i class="ti ti-sword"></i> Attacker
+        </button>
+      </div>
+      <h2 class="panel-title panel-title-row">
+        <span id="shop-title">Shop</span>
+        <span class="wallet" title="Money"><i class="ti ti-coin"></i> $<span id="money">0</span></span>
+      </h2>
+      <div class="panel-body shop" id="shop-defender" data-side="defender"></div>
+      <div class="panel-body shop" id="shop-attacker" data-side="attacker" hidden></div>
+    </aside>
+  </div>
+
+  <script src="shop-data.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
